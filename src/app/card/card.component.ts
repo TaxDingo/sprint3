@@ -12,7 +12,6 @@ import { Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() cartas: Product | undefined;
-  @Input() vista: 'grid' | 'lista' = 'grid'; // Recibe el estado de vista desde el padre
   
 }
 

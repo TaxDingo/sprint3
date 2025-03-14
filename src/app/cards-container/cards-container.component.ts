@@ -8,13 +8,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './cards-container.component.html',
   styleUrl: './cards-container.component.css'
 })
-export class CardsContainerComponent {
-  vista: 'grid' | 'lista' = 'grid'; // Estado inicial
 
-  @Output() vistaCambiada = new EventEmitter<'grid' | 'lista'>(); // Evento para notificar cambios
+export class CardsContainerComponent {}
 
-  cambiarVista() {
-    this.vista = this.vista === 'grid' ? 'lista' : 'grid';
-    this.vistaCambiada.emit(this.vista); // Emite el nuevo estado al hijo
-  }
+  function cambioClaseGrid(cambioVista: string, newClass: string): void {
+    const element = document.getElementById(cambioVista);
+    if (!element) {
+        console.error(`Element with ID '${cambioVista}' not found.`);
+        return;
+    }
+
+    // Remover clases previas de Bootstrap grid (ej. col-*, row)
+    element.classList.forEach(className => {
+        if (className.startsWith('col-') || className === 'row') {
+            element.classList.remove(className);
+        }
+    });
+
+    // Agregar la nueva clase
+    element.classList.add(newClass);    
 }
