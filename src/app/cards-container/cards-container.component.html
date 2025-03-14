@@ -1,1 +1,15 @@
-<p>cards-container works!</p>
+<div class="d-flex justify-content-center mb-3 generalcards">
+    <i 
+        style=" border-radius: 5px ;cursor: pointer; background-color: blue; font-size: 50px; border: 5px solid blue; margin-right: 30px; font-size: 48px;" 
+        class="fas fa-th"
+        [class.text-primary]="vista === 'grid'"
+        (click)="cambiarVista()">
+    </i>
+
+    <i 
+        style=" border-radius: 5px ;cursor: pointer; background-color: blue; font-size: 50px; border: 5px solid blue; margin-right: 30px; font-size: 48px;" 
+        class="fas fa-list"
+        [class.text-primary]="vista === 'lista'"
+        (click)="cambiarVista()">
+    </i>
+</div>

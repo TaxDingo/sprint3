@@ -1,0 +1,6 @@
+.generalcards{
+    display: flex;
+    color: white;
+    margin-top: 5%;
+    justify-content: end;
+}

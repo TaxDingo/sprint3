@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 
 @Component({
@@ -11,6 +11,7 @@ import { CardComponent } from '../card/card.component';
 export class HomeComponent {
 
   
+  @Input() vista: 'grid' | 'lista' = 'grid'; // Recibe el estado de vista desde el padre
 
   products: any[] = [
     {

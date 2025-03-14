@@ -1,10 +1,11 @@
+
+
 <div class="card-group">
-    <div class="row">
-    @for(p of products; track p){
-      <div class="card col-md-12 mb-1">
-        <app-card [cartas]="p"></app-card>
-      </div>
-    }
-  </div>
-    
-  </div>
+  <div class="row ">
+      @for(p of products; track p){
+          <div class="col-md-3 mb-3"> 
+              <div class="card p-3 m-2"> 
+                  <app-card [cartas]="p"></app-card>
+              </div>
+          </div>
+        }
