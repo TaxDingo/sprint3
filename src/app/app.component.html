@@ -1,4 +1,4 @@
 <app-navbar></app-navbar>
-<app-cards-container></app-cards-container>
-<app-home></app-home>
+<app-cards-container  (vistaCambiada)="cambioVista($event)"> </app-cards-container>
+<app-home [vista]="vista"></app-home>
 <app-footer></app-footer>

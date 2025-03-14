@@ -11,7 +11,7 @@ import { CardComponent } from '../card/card.component';
 export class HomeComponent {
 
   
-  @Input() vista: 'grid' | 'lista' = 'grid'; // Recibe el estado de vista desde el padre
+  @Input() vista: string = 'grid'; // Recibe el estado de vista desde el padre
 
   products: any[] = [
     {

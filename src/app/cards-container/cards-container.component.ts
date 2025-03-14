@@ -9,9 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cards-container.component.css'
 })
 
-export class CardsContainerComponent {}
+export class CardsContainerComponent {
 
-  function cambioClaseGrid(cambioVista: string, newClass: string): void {
+@Output() vistaCambiada = new EventEmitter<'grid' | 'lista'>(); // Evento para enviar la vista
+
+cambiarVista(modo: 'grid' | 'lista') {
+  this.vistaCambiada.emit(modo);     // Emite el evento con el nuevo modo
+}
+
+/*  function cambioClaseGrid(cambioVista: string, newClass: string): void {
     const element = document.getElementById(cambioVista);
     if (!element) {
         console.error(`Element with ID '${cambioVista}' not found.`);
@@ -26,5 +32,5 @@ export class CardsContainerComponent {}
     });
 
     // Agregar la nueva clase
-    element.classList.add(newClass);    
+    element.classList.add(newClass); */   
 }

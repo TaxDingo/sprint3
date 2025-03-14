@@ -15,4 +15,10 @@ import { CardComponent } from './card/card.component';
 })
 export class AppComponent {
   title = 'sprint3';
+  vista: string="";
+
+  cambioVista(type:string) {
+    this.vista=type;
+   
+  }
 }
